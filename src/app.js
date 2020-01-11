@@ -59,14 +59,15 @@ app.get('/weather',(req,res) => {
             return res.send({error})
         }
 
-        forcast(latitude,longitude,(error,forcastdata) => {
+        forcast(latitude,longitude,(error,weather,humidity) => {
             if(error){
                 return res.send({error})
             }
 
             res.send({
                 place:req.query.address,
-                weather:forcastdata,
+                weather,
+                humidity,
                 location
             })
         })

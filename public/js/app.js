@@ -15,8 +15,8 @@ weatherform.addEventListener('submit', (e) => {
             
         }
 
-        message_1.textContent = data.location
-        message_2.textContent = data.weather
+        message_1.textContent = 'The location '+data.location
+        message_2.textContent = 'has '+ data.weather+' and with humidity of '+data.humidity
        
       
     })
